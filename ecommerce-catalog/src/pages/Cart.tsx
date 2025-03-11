@@ -4,7 +4,7 @@ interface Product {
   id: number;
   title: string;
   price: number;
-  image: string;
+  thumbnail: string;
 }
 
 interface CartProps {
@@ -24,7 +24,7 @@ const Cart: React.FC<CartProps> = ({ cartItems, removeFromCart }) => {
           {cartItems.map((item) => (
             <div key={item.id} className="border p-4 rounded-lg shadow-lg relative">
               <img
-                src={item.image}
+                src={item.thumbnail}
                 alt={item.title}
                 className="w-full h-32 object-contain"
               />

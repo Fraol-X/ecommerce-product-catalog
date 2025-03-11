@@ -2,43 +2,53 @@ import React from "react";
 
 const Contact: React.FC = () => {
   return (
-    <div className="max-w-3xl mx-auto p-6 mt-10 bg-white shadow-lg rounded-lg">
-      <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">Contact Us</h2>
-      <p className="text-gray-600 text-center mb-6">
-        Have questions? We'd love to hear from you!
+    <div className="max-w-4xl mx-auto p-8 mt-12 bg-gray-100 shadow-md rounded-lg">
+      <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Get in Touch</h2>
+      <p className="text-gray-700 text-center mb-8">
+        Have any questions or concerns? Fill out the form below and we’ll get back to you as soon as possible.
       </p>
 
-      <form className="space-y-4">
-        <div>
-          <label className="block text-gray-700 font-semibold">Name</label>
-          <input
-            type="text"
-            placeholder="Enter your name"
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
-          />
+      <form className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label className="block text-gray-800 font-medium mb-1">First Name</label>
+            <input
+              type="text"
+              placeholder="John"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+            />
+          </div>
+          <div>
+            <label className="block text-gray-800 font-medium mb-1">Last Name</label>
+            <input
+              type="text"
+              placeholder="Doe"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
+            />
+          </div>
         </div>
 
         <div>
-          <label className="block text-gray-700 font-semibold">Email</label>
+          <label className="block text-gray-800 font-medium mb-1">Email Address</label>
           <input
             type="email"
-            placeholder="Enter your email"
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
+            placeholder="you@example.com"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
           />
         </div>
 
         <div>
-          <label className="block text-gray-700 font-semibold">Message</label>
+          <label className="block text-gray-800 font-medium mb-1">Message</label>
           <textarea
-            placeholder="Write your message here..."
-            rows={4}
-            className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-400"
+            placeholder="How can we help you?"
+            rows={5}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500"
           ></textarea>
         </div>
 
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
+          className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition font-semibold"
         >
           Send Message
         </button>

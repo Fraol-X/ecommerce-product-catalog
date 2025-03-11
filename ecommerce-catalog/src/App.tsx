@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Products from "./components/ProductList";
 import About from "./pages/About";
-import Footer from './components/Footer';
+import Footer from "./components/Footer";
 import Contact from "./pages/Contact";
 
 interface Product {
@@ -14,10 +14,11 @@ interface Product {
   price: number;
   category: string;
   image: string;
+  thumbnail: string;  // Add thumbnail here
 }
 
 const App: React.FC = () => {
-  const [cart, setCart] = useState<Product[]>([]);
+  const [cart, setCart] = useState<Product[]>([]); // Use Product type for cart items
 
   // Load cart from Local Storage on initial render
   useEffect(() => {
@@ -53,8 +54,15 @@ const App: React.FC = () => {
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products addToCart={addToCart} />} />
-            <Route path="/cart" element={<Cart cartItems={cart} removeFromCart={removeFromCart} />} />
+            {/* Pass empty string as searchTerm if you don't need to filter */}
+            <Route
+              path="/products"
+              element={<Products searchTerm="" addToCart={addToCart} />}
+            />
+            <Route
+              path="/cart"
+              element={<Cart cartItems={cart} removeFromCart={removeFromCart} />}
+            />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

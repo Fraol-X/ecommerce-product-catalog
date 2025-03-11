@@ -4,7 +4,7 @@ interface Product {
   id: number;
   title: string;
   price: number;
-  thumbnail: string;
+  thumbnail: string;  // Add thumbnail here
 }
 
 interface CartProps {

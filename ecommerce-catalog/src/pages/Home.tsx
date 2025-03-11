@@ -18,9 +18,15 @@ const Home: React.FC = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get("https://fakestoreapi.com/products?limit=3");
-        setProducts(response.data);
-      } catch (error) {
-        setError("Failed to load products");
+        if (response.status === 200) {
+          setProducts(response.data);
+        } else {
+          console.error("Unexpected response status:", response.status);
+          setError("Failed to load products");
+        }
+      } catch (error: any) {
+        console.error("Error fetching products:", error.message);
+        setError("Failed to load products. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -32,8 +38,8 @@ const Home: React.FC = () => {
   return (
     <div className="text-center">
       {/* 🎯 Hero Section */}
-      <section style={{ backgroundColor: '#387547' }} className=" text-white py-20 px-6">
-        <h1 className="text-5xl font-bold">Welcome to freshStore</h1>
+      <section style={{ backgroundColor: '#387547' }} className="text-white py-20 px-6">
+        <h1 className="text-5xl font-bold">Welcome to Golden Store</h1>
         <p className="mt-4 text-lg">
           Discover the best products at unbeatable prices. Shop now!
         </p>

@@ -7,6 +7,7 @@ interface Product {
   price: number;
   category: string;
   image: string;
+  thumbnail: string;  // Add thumbnail here
 }
 
 interface ProductsProps {
@@ -26,7 +27,12 @@ const Products: React.FC<ProductsProps> = ({ searchTerm = "", addToCart }) => {
       try {
         const response = await axios.get("https://fakestoreapi.com/products");
         if (Array.isArray(response.data)) {
-          setProducts(response.data);
+          // Ensure all products have a thumbnail, if not, provide a fallback
+          const updatedProducts = response.data.map((product) => ({
+            ...product,
+            thumbnail: product.image || 'path/to/default/thumbnail.jpg',  // Fallback to default image
+          }));
+          setProducts(updatedProducts);
         } else {
           throw new Error("Unexpected response format");
         }
@@ -93,7 +99,7 @@ const Products: React.FC<ProductsProps> = ({ searchTerm = "", addToCart }) => {
             product ? (
               <div key={product.id} className="border p-4 rounded-lg shadow-lg">
                 <img
-                  src={product.image}
+                  src={product.thumbnail}
                   alt={product.title}
                   className="w-full h-40 object-contain"
                 />

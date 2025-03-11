@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Ensure correct base path
+  base: '/', // Ensures correct path resolution
   build: {
     outDir: 'dist' // Vercel serves from 'dist' by default
   }

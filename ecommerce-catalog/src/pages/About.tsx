@@ -7,22 +7,22 @@ const About: React.FC = () => {
 
       <div className="bg-gray-100 p-6 rounded-lg shadow-md">
         <p className="text-lg text-gray-700 mb-4">
-          Welcome to <strong>Gold</strong>, your ultimate destination for incredible deals on electronics, fashion, and more. 
-          We focus on delivering high-quality products at unbeatable prices, complemented by exceptional customer service.
+          Welcome to <strong>FreshStore</strong>, your one-stop shop for unbeatable deals on electronics, fashion, and more. 
+          Our mission is to bring you top-quality products at the best prices, paired with exceptional customer service.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-          Our goal is simple: to create a smooth and enjoyable shopping experience. From browsing our online store to receiving your items, 
-          we aim to make each step seamless and stress-free. We collaborate with trusted suppliers to offer the latest trends and the best deals.
+          We strive to make your shopping journey effortless and enjoyable. From browsing our collection to the moment your order arrives, 
+          we ensure a smooth and hassle-free experience. We work closely with trusted suppliers to bring you the latest trends and best value.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-          What makes us different is our unwavering commitment to customer satisfaction. Whether you're looking for the latest gadgets or trendy fashion, 
-          our team is ready to assist you. With quick shipping, secure payments, and dedicated customer support, we ensure you have the best possible experience.
+          What sets us apart is our dedication to customer satisfaction. Whether you're searching for cutting-edge gadgets or stylish apparel, 
+          our team is here to assist you. With fast shipping, secure transactions, and responsive support, we guarantee a top-notch shopping experience.
         </p>
 
         <p className="text-lg text-gray-700 mb-4">
-          Thank you for choosing <strong>Gold</strong>. We're thrilled to be your go-to shopping partner and deliver top-quality products every day!
+          Thank you for choosing <strong>FreshStore</strong>. We are excited to be your trusted shopping partner, bringing you quality and value every day!
         </p>
       </div>
     </div>
